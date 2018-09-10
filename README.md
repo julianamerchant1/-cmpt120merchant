@@ -9,6 +9,7 @@ $ git commit -m "README file has been added."
 # Date: 9/1/18
 def main():
 print(“Hello, professor!”)
+print(“Goodbye!”)
 main()
 $ git add hello.py
 $ git commit -m "First Python script."
