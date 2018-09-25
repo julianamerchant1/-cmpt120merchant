@@ -1,7 +1,7 @@
 # CMPT 120 Intro to Programming
 # Lab #5 – Working with Strings and Functions
 # Author: Juliana Merchant
-# Created: 2000/11/25
+# Created: 2018/11/25
 def main():
 # get user's first and last names
     first = input("Enter your first name: ")
