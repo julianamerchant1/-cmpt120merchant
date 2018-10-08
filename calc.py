@@ -15,34 +15,35 @@ def main():
                 #Mult
                 if list[i]=='*':
                     result = float(list[i-1])*float(list[i+1])
-                    del list [i-1:1+2]
+                    del list [i-1:i+2]
                     list.insert (i-1, result)
                     break
                 #Div
                 elif list[i] == '/':
                     result = float(list[i-1])/float(list[i+1])
-                    del list [i-1:1+2]
+                    del list [i-1:i+2]
                     list.insert (i-1, result)
                     break
                 #Add and Sub
-            if '+' in list or '-' in list:
+            elif '+' in list or '-' in list:
                 #Add
                 if list[i] == '+':
                     result = float(list[i-1])+float(list[i+1])
-                    del list [i-1:1+2]
+                    del list [i-1:i+2]
                     list.insert (i-1, result)
                     break
-            #Sub
-            elif list[i] == '-':
-                result = float(list[i-1])-float(list[i+1])
-                del list [i-1:1+2]
-                list.insert (i-1, result)
-                break
-            #else option
+                #Sub
+                elif list[i] == '-':
+                    result = float(list[i-1])-float(list[i+1])
+                    del list [i-1:i+2]
+                    list.insert (i-1, result)
+                    break
+                #else option
             else:
                 print("error")
 
 #output answer
+    print(list[0])
   #?????
   #return result ?
   #print result ?
