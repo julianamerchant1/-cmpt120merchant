@@ -44,12 +44,14 @@ products = [
 #productQuantities = [ 4, 10, 5, 7, 2, 8 ]
 #all still true, must be changed to work with class created
 
-def printStockNew():
+def printStockNew(products):
     print()
     print("Available Products")
     print("------------------")
-    if cash > 0:
-        print(product.stock)
+    i = 0
+    for product in products:
+        print("(" + str(i) + ")" + product.name + " $" + str(product.price) + " " + str(product.stock))
+        i = i + 1
         
 #OLD CODE:        
 #def printStock():
@@ -67,7 +69,7 @@ def main():
 #    printStock()
 
     while cash > 0:
-        print(self.stock) # not working as an alt to printStock to output created classes for product list
+        printStockNew(products) # not working as an alt to printStock to output created classes for product list
         # says 'self' is undefined, improperly calling?
         vals = input("Enter product ID and quantity you wish to buy, or quit if you wish to: ").split(" ")
         if vals[0] == "quit": break
